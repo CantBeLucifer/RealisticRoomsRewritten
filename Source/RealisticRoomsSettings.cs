@@ -20,12 +20,12 @@ namespace RealisticRoomsRewritten
             var scoreStages = DefDatabase<RoomStatDef>.GetNamed("Space").scoreStages;
             foreach (var stage in scoreStages)
             {
-                if (stage.label == "rather tight") { stage.minScore = settings.minSpaceRatherTight; }
-                if (stage.label == "average-sized") { stage.minScore = settings.minSpaceAverageSized; }
-                if (stage.label == "somewhat spacious") { stage.minScore = settings.minSpaceSomewhatSpacious; }
-                if (stage.label == "quite spacious") { stage.minScore = settings.minSpaceQuiteSpacious; }
-                if (stage.label == "very spacious") { stage.minScore = settings.minSpaceVerySpacious; }
-                if (stage.label == "extremely spacious") { stage.minScore = settings.minSpaceExtremelySpacious; }
+                if (stage.untranslatedLabel == "rather tight") { stage.minScore = settings.minSpaceRatherTight; }
+                if (stage.untranslatedLabel == "average-sized") { stage.minScore = settings.minSpaceAverageSized; }
+                if (stage.untranslatedLabel == "somewhat spacious") { stage.minScore = settings.minSpaceSomewhatSpacious; }
+                if (stage.untranslatedLabel == "quite spacious") { stage.minScore = settings.minSpaceQuiteSpacious; }
+                if (stage.untranslatedLabel == "very spacious") { stage.minScore = settings.minSpaceVerySpacious; }
+                if (stage.untranslatedLabel == "extremely spacious") { stage.minScore = settings.minSpaceExtremelySpacious; }
             }
 
             int beauty = settings.filthTweakEnabled ? -4 : -12;
